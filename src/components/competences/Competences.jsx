@@ -1,5 +1,5 @@
-import { SKILLS_TECH, SKILLS_SOFT } from '../data/portfolio';
-import { SectionTitle, AnimatedCard } from '../components/UI';
+import { SKILLS_TECH, SKILLS_SOFT } from '../../data/portfolio';
+import { SectionTitle, AnimatedCard } from '../ui/UI';
 import './Competences.css';
 
 // ── SVG Logos ─────────────────────────────────────────────────────────────────

@@ -1,5 +1,5 @@
-import { VEILLE_ITEMS } from '../data/portfolio';
-import { SectionTitle, Tag, EmptyState, AnimatedCard } from '../components/UI';
+import { VEILLE_ITEMS } from '../../data/portfolio';
+import { SectionTitle, Tag, EmptyState, AnimatedCard } from '../ui/UI';
 import './Veille.css';
 
 function VeilleCard({ item, index }) {

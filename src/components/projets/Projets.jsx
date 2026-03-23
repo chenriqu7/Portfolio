@@ -1,5 +1,5 @@
-import { PROJECTS } from '../data/portfolio';
-import { SectionTitle, Tag, EmptyState, AnimatedCard } from '../components/UI';
+import { PROJECTS } from '../../data/portfolio';
+import { SectionTitle, Tag, EmptyState, AnimatedCard } from '../ui/UI';
 import './Projets.css';
 
 function ProjectCard({ project, index }) {

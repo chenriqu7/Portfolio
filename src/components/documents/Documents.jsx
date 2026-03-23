@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { DOC_CATEGORIES, DOCUMENTS } from '../data/portfolio';
-import { SectionTitle, EmptyState, AnimatedCard } from '../components/UI';
+import { DOC_CATEGORIES, DOCUMENTS } from '../../data/portfolio';
+import { SectionTitle, EmptyState, AnimatedCard } from '../ui/UI';
 import './Documents.css';
 
 function PdfModal({ doc, onClose }) {

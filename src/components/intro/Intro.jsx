@@ -1,5 +1,5 @@
-import { IDENTITY } from '../data/portfolio';
-import { Button } from '../components/UI';
+import { IDENTITY } from '../../data/portfolio';
+import { Button } from '../ui/UI';
 import './Intro.css';
 
 export default function Intro() {

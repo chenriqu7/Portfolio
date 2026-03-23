@@ -1,5 +1,5 @@
-import { EXPERIENCES, EDUCATION } from '../data/portfolio';
-import { SectionTitle, Tag, AnimatedCard } from '../components/UI';
+import { EXPERIENCES, EDUCATION } from '../../data/portfolio';
+import { SectionTitle, Tag, AnimatedCard } from '../ui/UI';
 import './Parcours.css';
 
 function TimelineItem({ item, type, index }) {

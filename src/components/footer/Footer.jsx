@@ -1,4 +1,4 @@
-import { IDENTITY } from '../data/portfolio';
+import { IDENTITY } from '../../data/portfolio';
 import './Footer.css';
 
 export default function Footer() {

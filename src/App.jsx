@@ -1,15 +1,15 @@
 import './styles/global.css';
 import './styles/sections.css';
 
-import Navbar    from './components/Navbar';
-import Footer    from './components/Footer';
+import Navbar    from './components/navbar/Navbar';
+import Footer    from './components/footer/Footer';
 
-import Intro        from './sections/Intro';
-import Competences  from './sections/Competences';
-import Parcours     from './sections/Parcours';
-import Projets      from './sections/Projets';
-import Documents    from './sections/Documents';
-import Veille       from './sections/Veille';
+import Intro        from './components/intro/Intro';
+import Competences  from './components/competences/Competences';
+import Parcours     from './components/parcours/Parcours';
+import Projets      from './components/projets/Projets';
+import Documents    from './components/documents/Documents';
+import Veille       from './components/veille/Veille';
 
 import { useActiveSection } from './hooks/useActiveSection';
 

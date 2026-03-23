@@ -1,5 +1,5 @@
 import './UI.css';
-import { useInView } from '../hooks/useInView';
+import { useInView } from '../../hooks/useInView';
 
 // ── Section Header ────────────────────────────────────────────────────────────
 export function SectionTitle({ eyebrow, title }) {
