@@ -1,0 +1,88 @@
+/* ─── Veille ─────────────────────────────────────────────────────────────────── */
+.veille__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.veille-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.veille-card:hover {
+  border-color: rgba(110,95,240,0.3);
+  transform: translateY(-2px);
+}
+
+.veille-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.veille-card__date {
+  color: var(--text-subtle);
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+}
+
+.veille-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.veille-card__title {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.veille-card__source {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.veille-card__source-label {
+  color: var(--accent);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  background: var(--accent-dim);
+  border-radius: var(--radius-full);
+}
+
+.veille-card__desc {
+  color: #7070a8;
+  font-size: 0.875rem;
+  line-height: 1.72;
+  flex: 1;
+}
+
+.veille-card__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-light);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  transition: color var(--transition);
+}
+.veille-card__link:hover {
+  color: var(--text);
+}

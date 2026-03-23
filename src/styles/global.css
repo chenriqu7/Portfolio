@@ -1,0 +1,110 @@
+/* ─── FONTS ─────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ─── VARIABLES ─────────────────────────────────────────────────────────────── */
+:root {
+  --bg:            #09090f;
+  --bg-alt:        #0e0e17;
+  --surface:       #121220;
+  --card:          #15151f;
+  --card-hover:    #1a1a28;
+  --border:        #1e1e30;
+  --border-subtle: #171726;
+
+  --accent:        #6e5ff0;
+  --accent-light:  #8b7cf5;
+  --accent-dim:    rgba(110, 95, 240, 0.12);
+  --accent-glow:   rgba(110, 95, 240, 0.25);
+
+  --accent-b:      #f0705f;
+  --accent-b-dim:  rgba(240, 112, 95, 0.12);
+
+  --text:          #eeeef5;
+  --text-muted:    #7070a0;
+  --text-subtle:   #4a4a70;
+
+  --radius-sm:     8px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+  --radius-full:   9999px;
+
+  --shadow-card:   0 4px 32px rgba(0, 0, 0, 0.35);
+  --shadow-glow:   0 0 60px rgba(110, 95, 240, 0.15);
+
+  --transition:    0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+/* ─── SELECTION ─────────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent-light);
+}
+
+/* ─── UTILITY ───────────────────────────────────────────────────────────────── */
+.mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
