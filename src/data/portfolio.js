@@ -17,44 +17,44 @@ export const IDENTITY = {
 
 // ── COMPÉTENCES TECHNIQUES ───────────────────────────────────────────────────
 export const SKILLS_TECH = [
-    { name: "HTML",       icon: "html"       },
-    { name: "CSS",        icon: "css"        },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "React",      icon: "react"      },
-    { name: "Angular",    icon: "angular"    },
-    { name: "PHP",        icon: "php"        },
-    { name: "Symfony",    icon: "symfony"    },
-    { name: "C#/.NET",    icon: "dotnet"     },
-    { name: "C++",        icon: "cpp"        },
-    { name: "Python",     icon: "python"     },
-    { name: "MySQL",      icon: "mysql"      },
-    { name: "PostgreSQL", icon: "postgresql" },
-    { name: "Git",        icon: "git"        },
-    { name: "Docker",     icon: "docker"     },
+    {name: "HTML", icon: "html"},
+    {name: "CSS", icon: "css"},
+    {name: "JavaScript", icon: "javascript"},
+    {name: "React", icon: "react"},
+    {name: "Angular", icon: "angular"},
+    {name: "PHP", icon: "php"},
+    {name: "Symfony", icon: "symfony"},
+    {name: "C#/.NET", icon: "dotnet"},
+    {name: "C++", icon: "cpp"},
+    {name: "Python", icon: "python"},
+    {name: "MySQL", icon: "mysql"},
+    {name: "PostgreSQL", icon: "postgresql"},
+    {name: "Git", icon: "git"},
+    {name: "Docker", icon: "docker"},
 ];
 
 // ── SAVOIR-FAIRE ─────────────────────────────────────────────────────────────
 export const SKILLS_SOFT = [
-    { name: "Autonomie",         icon: "🎯" },
-    { name: "Travail en équipe", icon: "🤝" },
-    { name: "Communication",     icon: "💬" },
-    { name: "Polyvalent",        icon: "🔄" },
-    { name: "Gestion de projet", icon: "📋" },
-    { name: "Méthode Agile",     icon: "⚡" },
+    {name: "Autonomie", icon: "🎯"},
+    {name: "Travail en équipe", icon: "🤝"},
+    {name: "Communication", icon: "💬"},
+    {name: "Polyvalent", icon: "🔄"},
+    {name: "Gestion de projet", icon: "📋"},
+    {name: "Méthode Agile", icon: "⚡"},
 ];
 
 export const LANGUAGES = [
-    { name: "Français",   level: "Langue maternelle", icon: "🇫🇷" },
-    { name: "Portugais",  level: "Langue maternelle", icon: "🇵🇹" },
-    { name: "Anglais",    level: "Niveau B2",          icon: "🇬🇧" },
-    { name: "Espagnol",   level: "Courant",            icon: "🇪🇸" },
+    {name: "Français", level: "Langue maternelle", icon: "🇫🇷"},
+    {name: "Portugais", level: "Langue maternelle", icon: "🇵🇹"},
+    {name: "Anglais", level: "Niveau B2", icon: "🇬🇧"},
+    {name: "Espagnol", level: "Courant", icon: "🇪🇸"},
 ];
 
 // ── EXPÉRIENCES PROFESSIONNELLES ─────────────────────────────────────────────
 export const EXPERIENCES = [
     {
         date: "2026",
-        title: "Stagiaire",
+        title: "Stage",
         place: "Pictav Informatique",
         location: "Chasseneuil-du-Poitou",
         desc: "Stage de 6 semaines. Développement d'une application PHP + MySQL permettant de gérer les accès aux serveurs de l'entreprise.",
@@ -62,10 +62,10 @@ export const EXPERIENCES = [
     },
     {
         date: "2025",
-        title: "Stagiaire",
+        title: "Stage",
         place: "StylDev",
         location: "Saint-Georges-lès-Baillargeaux",
-        desc: "tage de 4 semaines. Conversion d'une API GraphQL vers une API REST avec FastEndpoints.",
+        desc: "Stage de 4 semaines. Conversion d'une API GraphQL vers une API REST avec FastEndpoints.",
         tags: [".NET", "FastEndpoints", "REST"],
     },
 ];
@@ -87,11 +87,11 @@ export const EDUCATION = [
         desc: "BUT Informatique parcours développeur full stack",
     },
     {
-        date:     "2023",
-        title:    "Baccalauréat – Mention Bien",
-        place:    "Lycée Bertrand d'Argentré",
+        date: "2023",
+        title: "Baccalauréat – Mention Bien",
+        place: "Lycée Bertrand d'Argentré",
         location: "Vitré",
-        desc:     "Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques).",
+        desc: "Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques).",
     },
 ];
 
@@ -102,15 +102,43 @@ export const PROJECTS = [
         desc: "Tableau de bord sécurisé permettant de centraliser la gestion des accès aux serveurs et de suivre les connexions à distance en temps réel.",
         tags: ["PHP", "HTML/CSS", "JavaScript", "MySQL"],
         github: "https://github.com/chenriqu7/PortailServeur",
-        demo: "https://...",
         year: "2026",
     },
+    {
+        title: "BeReady Backend",
+        desc: "",
+        tags: [".NET", "FastEndpoints", "API RestFul"],
+        github: "https://github.com/chenriqu7/BeReady-Backend",
+        year: "2026",
+    },
+    {
+        title: "BeReady Frontend",
+        desc: "",
+        tags: ["Angular", "HTML/CSS", "Ionic", "Capacitor"],
+        github: "",
+        year: "2026",
+    },
+    {
+        title: "PyroFêtes Frontend",
+        desc: "PyroFêtes est une application web de gestion pour un artificier. L'application permet de gérer les dévis les stocks et les clients.",
+        tags: ["Angular", "HTML/CSS", "NgZorro", "Tailwind"],
+        github: "https://github.com/chenriqu7/Pyrofetes-Frontend",
+        year: "2025",
+    },
+    {
+        title: "PyroFêtes Backend",
+        desc: "PyroFêtes est une application web de gestion pour un artificier. L'application permet de gérer les dévis les stocks et les clients.",
+        tags: [".NET", "FastEndpoints", "API RestFul"],
+        github: "https://github.com/chenriqu7/Pyrofetes-Backend",
+        year: "2025",
+    },
+
 ];
 
 // ── CATÉGORIES DE DOCUMENTS ───────────────────────────────────────────────────
 export const DOC_CATEGORIES = [
     {id: "e5", label: "E5", full: "Support & Mise à disposition"},
-    {id: "e6", label: "E6", full: "Cybersécurité des services"},
+    {id: "dev", label: "dev", full: "Développement Web et Logiciel"},
     {id: "stages", label: "Stages", full: "Documents de stage"},
     {id: "projets", label: "Projets", full: "Documentation projets"},
     {id: "autre", label: "Autres", full: "Autres documents"},
@@ -133,6 +161,28 @@ export const DOCUMENTS = [
         date: "Janvier 2026",
         file: "/documents/PortailServeur-CahierDesCharges.pdf",
     },
+    {
+        category: "dev",
+        title: "Angular",
+        desc: "Fiche de procédure",
+        date: "Novembre 2025",
+        file: "/documents/ANGULAR.pdf",
+    },
+    {
+        category: "dev",
+        title: "Capacitor",
+        desc: "Fiche de procédure",
+        date: "Mars 2026",
+        file: "/documents/CAPACITOR.pdf",
+    },
+    {
+        category: "dev",
+        title: "Pl/pgsql",
+        desc: "Fiche de procédure",
+        date: "Mars 2026",
+        file: "/documents/PLPGSQL.pdf",
+    },
+
 ];
 
 // ── VEILLE TECHNOLOGIQUE ──────────────────────────────────────────────────────

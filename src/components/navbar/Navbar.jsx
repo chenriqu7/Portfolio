@@ -26,7 +26,7 @@ export default function Navbar({ active }) {
           onClick={() => scrollTo('intro')}
         >
           <span className="navbar__brand-dot" />
-          portfolio
+          Cristiano HENRIQUE GASPAR
         </button>
 
         {/* Desktop nav */}
