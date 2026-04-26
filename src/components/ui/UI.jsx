@@ -31,13 +31,14 @@ export function EmptyState({ message = 'Contenu à venir…' }) {
 }
 
 // ── Animated Card wrapper ─────────────────────────────────────────────────────
-export function AnimatedCard({ children, className = '', delay = 0, style = {} }) {
+export function AnimatedCard({ children, className = '', delay = 0, style = {}, onClick }) {
   const { ref, isVisible } = useInView();
   return (
     <div
       ref={ref}
       className={`anim-card ${isVisible ? 'visible' : ''} ${className}`}
       style={{ transitionDelay: `${delay}ms`, ...style }}
+      onClick={onClick}
     >
       {children}
     </div>

@@ -7,7 +7,7 @@ export const IDENTITY = {
     firstName: "Cristiano",
     lastName: "Henrique Gaspar",
     initials: "CHG",
-    role: "Développeur en formation",
+    role: "",
     subtitle: "BTS SIO · Option SLAM",
     bio: "Passionné par le développement logiciel, je suis actuellement en BTS SIO option SLAM. J'aime concevoir des applications propres, efficaces et bien documentées. Ce portfolio regroupe mes projets, compétences et documents réalisés au cours de ma formation.",
     email: "cristianogaspar601@gmail.com",
@@ -43,12 +43,6 @@ export const SKILLS_SOFT = [
     {name: "Méthode Agile", icon: "⚡"},
 ];
 
-export const LANGUAGES = [
-    {name: "Français", level: "Langue maternelle", icon: "🇫🇷"},
-    {name: "Portugais", level: "Langue maternelle", icon: "🇵🇹"},
-    {name: "Anglais", level: "Niveau B2", icon: "🇬🇧"},
-    {name: "Espagnol", level: "Courant", icon: "🇪🇸"},
-];
 
 // ── EXPÉRIENCES PROFESSIONNELLES ─────────────────────────────────────────────
 export const EXPERIENCES = [
@@ -98,41 +92,35 @@ export const EDUCATION = [
 // ── PROJETS ───────────────────────────────────────────────────────────────────
 export const PROJECTS = [
     {
-        title: "Portail Serveur",
-        desc: "Tableau de bord sécurisé permettant de centraliser la gestion des accès aux serveurs et de suivre les connexions à distance en temps réel.",
-        tags: ["PHP", "HTML/CSS", "JavaScript", "MySQL"],
-        github: "https://github.com/chenriqu7/PortailServeur",
-        year: "2026",
+        title:    "Portail Serveur",
+        desc:     "Tableau de bord sécurisé permettant de centraliser la gestion des accès aux serveurs et de suivre les connexions à distance en temps réel.",
+        descLong: "Développé lors de mon stage de 6 semaines chez Pictav Informatique, ce portail permet aux administrateurs de gérer les accès aux serveurs de l'entreprise. L'application propose une interface de gestion des utilisateurs, un suivi des connexions en temps réel et un système d'authentification sécurisé.",
+        tags:     ["PHP", "HTML/CSS", "JavaScript", "MySQL"],
+        github:   "https://github.com/chenriqu7/PortailServeur",
+        demo:     "",
+        year:     "2026",
+        screenshots: [],
     },
     {
-        title: "BeReady Backend",
-        desc: "",
-        tags: [".NET", "FastEndpoints", "API RestFul"],
-        github: "https://github.com/chenriqu7/BeReady-Backend",
-        year: "2026",
+        title:    "BeReady",
+        desc:     "Application fullstack composée d'une API REST .NET et d'un frontend Angular/Ionic permettant une utilisation mobile et web.",
+        descLong: "BeReady est une application fullstack développée avec une API REST en .NET FastEndpoints et un frontend Angular avec Ionic et Capacitor pour un rendu mobile natif. Le backend expose des endpoints RESTful consommés par le frontend cross-platform.",
+        tags:     [".NET", "FastEndpoints", "API RESTful", "Angular", "Ionic", "Capacitor", "HTML/CSS"],
+        github:   "https://github.com/chenriqu7/BeReady-Backend",
+        demo:     "",
+        year:     "2026",
+        screenshots: [],
     },
     {
-        title: "BeReady Frontend",
-        desc: "",
-        tags: ["Angular", "HTML/CSS", "Ionic", "Capacitor"],
-        github: "",
-        year: "2026",
+        title:    "PyroFêtes",
+        desc:     "Application web de gestion pour un artificier — devis, stocks et clients, avec une API REST .NET et un frontend Angular.",
+        descLong: "PyroFêtes est une application fullstack de gestion métier développée en équipe de quatre avec la méthode Agile. Le backend expose une API REST construite avec .NET FastEndpoints. Le frontend Angular utilise NgZorro pour les composants UI et Tailwind CSS pour le style. L'application couvre la gestion des devis, des stocks de produits pyrotechniques et du portefeuille clients.",
+        tags:     [".NET", "FastEndpoints", "API RESTful", "Angular", "NgZorro", "Tailwind", "HTML/CSS"],
+        github:   "https://github.com/chenriqu7/Pyrofetes-Frontend",
+        demo:     "",
+        year:     "2025",
+        screenshots: [],
     },
-    {
-        title: "PyroFêtes Frontend",
-        desc: "PyroFêtes est une application web de gestion pour un artificier. L'application permet de gérer les dévis les stocks et les clients.",
-        tags: ["Angular", "HTML/CSS", "NgZorro", "Tailwind"],
-        github: "https://github.com/chenriqu7/Pyrofetes-Frontend",
-        year: "2025",
-    },
-    {
-        title: "PyroFêtes Backend",
-        desc: "PyroFêtes est une application web de gestion pour un artificier. L'application permet de gérer les dévis les stocks et les clients.",
-        tags: [".NET", "FastEndpoints", "API RestFul"],
-        github: "https://github.com/chenriqu7/Pyrofetes-Backend",
-        year: "2025",
-    },
-
 ];
 
 // ── CATÉGORIES DE DOCUMENTS ───────────────────────────────────────────────────
