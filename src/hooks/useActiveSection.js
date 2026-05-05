@@ -1,31 +1,33 @@
 import { useState, useEffect } from 'react';
 
-/**
- * Détecte la section visible dans le viewport pendant le scroll.
- * @param {string[]} sectionIds - Liste des IDs de sections à surveiller
- * @param {number} offset - Offset en px depuis le haut (hauteur navbar)
- * @returns {string} ID de la section active
- */
 export function useActiveSection(sectionIds, offset = 100) {
   const [active, setActive] = useState(sectionIds[0]);
 
   useEffect(() => {
     const handler = () => {
-      const scrollY = window.scrollY;
-      let current = sectionIds[0];
+      // Si on est tout en bas de la page → dernière section
+      const atBottom =
+          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+      if (atBottom) {
+        setActive(sectionIds[sectionIds.length - 1]);
+        return;
+      }
 
-      for (const id of sectionIds) {
+      let current = sectionIds[0];
+      for (const id of [...sectionIds].reverse()) {
         const el = document.getElementById(id);
         if (!el) continue;
-        if (scrollY >= el.offsetTop - offset) {
+        if (el.getBoundingClientRect().top <= offset + 1) {
           current = id;
+          break;
         }
       }
+
       setActive(current);
     };
 
     window.addEventListener('scroll', handler, { passive: true });
-    handler(); // run once on mount
+    handler();
     return () => window.removeEventListener('scroll', handler);
   }, [sectionIds, offset]);
 

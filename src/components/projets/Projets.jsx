@@ -3,11 +3,63 @@ import { PROJECTS } from '../../data/portfolio';
 import { SectionTitle, Tag, EmptyState, AnimatedCard } from '../ui/UI';
 import './Projets.css';
 
+function Bold({ text }) {
+    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    return (
+        <>
+            {parts.map((part, i) =>
+                part.startsWith('**') && part.endsWith('**')
+                    ? <strong key={i}>{part.slice(2, -2)}</strong>
+                    : part
+            )}
+        </>
+    );
+}
+
+function DescLong({ text }) {
+    const blocks = text.split('\n\n').filter(Boolean);
+    return (
+        <div className="desc-long">
+            {blocks.map((block, i) => {
+                const lines = block.split('\n');
+                const isListBlock = lines.some((l) => l.startsWith('- '));
+
+                if (isListBlock) {
+                    const title = lines.find((l) => !l.startsWith('- '));
+                    const items = lines.filter((l) => l.startsWith('- ')).map((l) => l.slice(2));
+                    return (
+                        <div key={i} className="desc-long__block">
+                            {title && <p className="desc-long__label"><Bold text={title} /></p>}
+                            <ul className="desc-long__list">
+                                {items.map((item, j) => <li key={j}><Bold text={item} /></li>)}
+                            </ul>
+                        </div>
+                    );
+                }
+
+                const [first, ...rest] = lines;
+                const isLabeled = first.endsWith(':') && rest.length > 0;
+                return (
+                    <div key={i} className="desc-long__block">
+                        {isLabeled ? (
+                            <>
+                                <p className="desc-long__label"><Bold text={first} /></p>
+                                <p><Bold text={rest.join(' ')} /></p>
+                            </>
+                        ) : (
+                            <p><Bold text={block} /></p>
+                        )}
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
 // ── Modal ─────────────────────────────────────────────────────────────────────
 function ProjectModal({ project, onClose }) {
     const [activeImg, setActiveImg] = useState(0);
 
-    // Fermeture avec Échap
     useEffect(() => {
         const handler = (e) => { if (e.key === 'Escape') onClose(); };
         window.addEventListener('keydown', handler);
@@ -86,7 +138,10 @@ function ProjectModal({ project, onClose }) {
 
                     {/* Description longue */}
                     <div className="proj-modal__desc">
-                        <p>{project.descLong || project.desc}</p>
+                        {project.descLong
+                            ? <DescLong text={project.descLong} />
+                            : <p>{project.desc}</p>
+                        }
                     </div>
 
                     {/* Tags */}

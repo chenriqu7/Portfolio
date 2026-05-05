@@ -56,14 +56,7 @@ export default function Intro() {
         </div>
       </div>
 
-      {/* Avatar decoration */}
-      <div className="intro__visual">
-        <div className="intro__avatar">
-          <span className="intro__avatar-text">{IDENTITY.initials}</span>
-          <div className="intro__avatar-ring intro__avatar-ring--1" />
-          <div className="intro__avatar-ring intro__avatar-ring--2" />
-        </div>
-      </div>
+      
 
       {/* Scroll hint */}
       <div className="intro__scroll-hint mono">

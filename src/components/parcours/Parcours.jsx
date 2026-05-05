@@ -33,7 +33,7 @@ function TimelineItem({ item, type, index }) {
 export default function Parcours() {
   return (
     <section id="parcours" className="section parcours">
-      <SectionTitle eyebrow="Mon chemin" title="Parcours" />
+      <SectionTitle eyebrow="Parcours" title="Parcours" />
 
       <div className="parcours__grid">
         <div className="parcours__column">

@@ -62,7 +62,7 @@ export default function Documents() {
 
     return (
         <section id="documents" className="section documents">
-            <SectionTitle eyebrow="Ma documentation BTS" title="Documents" />
+            <SectionTitle eyebrow="Ma documentation" title="Documents" />
             <div className="docs-tabs" role="tablist">
                 {DOC_CATEGORIES.map((cat) => (
                     <button
@@ -72,8 +72,7 @@ export default function Documents() {
                         className={`docs-tab ${activeTab === cat.id ? 'active' : ''}`}
                         onClick={() => setActiveTab(cat.id)}
                     >
-                        <span className="docs-tab__label">{cat.label}</span>
-                        <span className="docs-tab__full">{cat.full}</span>
+                        {cat.label}
                     </button>
                 ))}
             </div>

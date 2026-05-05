@@ -351,6 +351,55 @@
   transform: translateY(-1px);
 }
 
+/* ─── DescLong ───────────────────────────────────────────────────────────────── */
+.desc-long {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.desc-long__block p {
+  color: #9090b8;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.desc-long__label {
+  color: var(--text-muted) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem !important;
+}
+
+.desc-long__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.desc-long__list li {
+  color: #9090b8;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.desc-long__list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .proj-modal { max-height: 95vh; }
   .proj-modal__body { padding: 1.25rem; }
