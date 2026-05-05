@@ -17,41 +17,36 @@ export const IDENTITY = {
 
 // ── COMPÉTENCES TECHNIQUES ───────────────────────────────────────────────────
 export const SKILLS_TECH = [
-    // Frontend
     { name: "HTML",       icon: "html",       category: "Frontend" },
     { name: "CSS",        icon: "css",        category: "Frontend" },
     { name: "JavaScript", icon: "javascript", category: "Frontend" },
     { name: "React",      icon: "react",      category: "Frontend" },
     { name: "Angular",    icon: "angular",    category: "Frontend" },
-    // Backend
     { name: "PHP",        icon: "php",        category: "Backend"  },
     { name: "Symfony",    icon: "symfony",    category: "Backend"  },
     { name: "C#/.NET",    icon: "dotnet",     category: "Backend"  },
     { name: "C++",        icon: "cpp",        category: "Backend"  },
     { name: "Python",     icon: "python",     category: "Backend"  },
-    // Data
     { name: "MySQL",      icon: "mysql",      category: "Data"     },
     { name: "PostgreSQL", icon: "postgresql", category: "Data"     },
-    // Outils
     { name: "Git",        icon: "git",        category: "Outils"   },
     { name: "Docker",     icon: "docker",     category: "Outils"   },
 ];
 
 export const SKILLS_SOFT = [
-    { name: "Autonomie",        icon: "🎯", desc: "Capable de m'organiser et avancer seul sur un sujet sans attendre." },
-    { name: "Travail en équipe",icon: "🤝", desc: "À l'aise en équipe, je m'adapte aux méthodes de travail collectives." },
-    { name: "Communication",    icon: "💬", desc: "J'exprime clairement mes idées, à l'écrit comme à l'oral." },
-    { name: "Polyvalent",       icon: "🔄", desc: "Je monte en compétences rapidement sur de nouveaux sujets." },
-    { name: "Gestion de projet",icon: "📋", desc: "Suivi des tâches, respect des délais et priorisation des livrables." },
-    { name: "Méthode Agile",    icon: "⚡", desc: "Habitué aux sprints, daily stand-ups et revues de sprint en équipe." },
+    { name: "Autonomie",         icon: "🎯" },
+    { name: "Travail en équipe", icon: "🤝" },
+    { name: "Communication",     icon: "💬" },
+    { name: "Polyvalent",        icon: "🔄" },
+    { name: "Gestion de projet", icon: "📋" },
+    { name: "Méthode Agile",     icon: "⚡" },
 ];
 
-// niveau : "Natif" | "Courant" | "Avancé" | "Intermédiaire" | "Notions"
 export const SKILLS_LANGUAGES = [
-    { name: "Français",   level: "Natif",    flag: "🇫🇷" },
-    { name: "Portugais",  level: "Natif",    flag: "🇵🇹" },
-    { name: "Espagnol",   level: "Courant",  flag: "🇪🇸" },
-    { name: "Anglais",    level: "Avancé",   flag: "🇬🇧" },
+    { name: "Français",  level: "Natif", flag: "🇫🇷" },
+    { name: "Portugais", level: "Natif", flag: "🇵🇹" },
+    { name: "Espagnol",  level: "Courant",    flag: "🇪🇸" },
+    { name: "Anglais",   level: "B2",    flag: "🇬🇧" },
 ];
 
 

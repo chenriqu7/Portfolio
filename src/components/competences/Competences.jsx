@@ -56,8 +56,10 @@ const TECH_ICONS = {
     ),
     dotnet: (
         <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="14" fill="#512BD4"/>
-            <path d="M8 19.5V12.5h1.5l3 5v-5H14v7h-1.5l-3-5v5H8zM15.3 19.5v-7H20v1.2h-3.2v1.7H20V16.7h-3.2v1.6H20v1.2h-4.7zM23.5 19.5l-2.3-7h1.5l1.6 5.2 1.6-5.2H27.5l-2.3 7h-1.7zM7 19.5a.75.75 0 110-1.5.75.75 0 010 1.5z" fill="#fff"/>
+            <path d="M16 2L4.5 8.5v15L16 30l11.5-6.5v-15L16 2z" fill="#9B4F96"/>
+            <path d="M16 2v28l11.5-6.5v-15L16 2z" fill="#68217A"/>
+            <path d="M16 9c-3.9 0-7 3.1-7 7s3.1 7 7 7c2.5 0 4.7-1.3 5.9-3.3l-2.6-1.5c-.7 1-1.9 1.7-3.3 1.7-2.2 0-4-1.8-4-4s1.8-4 4-4c1.4 0 2.6.7 3.3 1.7l2.6-1.5C20.7 10.3 18.5 9 16 9z" fill="#fff"/>
+            <path d="M21 15h-1v-1h-1v1h-1v1h1v1h1v-1h1v-1zM24 15h-1v-1h-1v1h-1v1h1v1h1v-1h1v-1z" fill="#fff"/>
         </svg>
     ),
     cpp: (
@@ -102,14 +104,6 @@ const TECH_ICONS = {
 
 const CATEGORIES = ['Frontend', 'Backend', 'Data', 'Outils'];
 
-const LEVEL_STYLE = {
-    'Natif':          'level--natif',
-    'Courant':        'level--courant',
-    'Avancé':         'level--avance',
-    'Intermédiaire':  'level--intermediaire',
-    'Notions':        'level--notions',
-};
-
 // ── Tech Grid par catégorie ───────────────────────────────────────────────────
 function TechCategory({ category, skills, startIndex }) {
     return (
@@ -120,12 +114,12 @@ function TechCategory({ category, skills, startIndex }) {
                     const svgIcon = TECH_ICONS[skill.icon];
                     return (
                         <AnimatedCard className="skill-card" delay={(startIndex + i) * 40} key={skill.name}>
-              <span className="skill-card__icon">
-                {svgIcon
-                    ? <span className="skill-card__svg">{svgIcon}</span>
-                    : skill.icon
-                }
-              </span>
+                            <span className="skill-card__icon">
+                                {svgIcon
+                                    ? <span className="skill-card__svg">{svgIcon}</span>
+                                    : skill.icon
+                                }
+                            </span>
                             <span className="skill-card__name">{skill.name}</span>
                         </AnimatedCard>
                     );
@@ -136,25 +130,11 @@ function TechCategory({ category, skills, startIndex }) {
 }
 
 // ── Soft Skill Card ───────────────────────────────────────────────────────────
-function SoftCard({ name, icon, desc, index }) {
+function SoftCard({ name, icon, index }) {
     return (
         <AnimatedCard className="soft-card" delay={index * 60}>
-            <div className="soft-card__top">
-                <span className="soft-card__icon">{icon}</span>
-                <span className="soft-card__name">{name}</span>
-            </div>
-            <p className="soft-card__desc">{desc}</p>
-        </AnimatedCard>
-    );
-}
-
-// ── Language Card ─────────────────────────────────────────────────────────────
-function LangCard({ name, level, flag, index }) {
-    return (
-        <AnimatedCard className="lang-card" delay={index * 60}>
-            <span className="lang-card__flag">{flag}</span>
-            <span className="lang-card__name">{name}</span>
-            <span className={`lang-card__level ${LEVEL_STYLE[level] ?? ''}`}>{level}</span>
+            <span className="soft-card__icon">{icon}</span>
+            <span className="soft-card__name">{name}</span>
         </AnimatedCard>
     );
 }
@@ -167,44 +147,53 @@ export default function Competences() {
         <section id="competences" className="section competences">
             <SectionTitle eyebrow="Ce que je maîtrise" title="Compétences" />
 
-            {/* Technologies par catégorie */}
-            <div className="competences__block">
-                <h3 className="competences__group-title mono">Technologies</h3>
-                <div className="tech-categories">
-                    {CATEGORIES.map((cat) => {
-                        const catSkills = SKILLS_TECH.filter((s) => s.category === cat);
-                        const start = skillIndex;
-                        skillIndex += catSkills.length;
-                        return (
-                            <TechCategory
-                                key={cat}
-                                category={cat}
-                                skills={catSkills}
-                                startIndex={start}
-                            />
-                        );
-                    })}
-                </div>
-            </div>
+            <div className="competences__layout">
 
-            {/* Savoir-faire */}
-            <div className="competences__block">
-                <h3 className="competences__group-title mono">Soft skills</h3>
-                <div className="soft-grid">
-                    {SKILLS_SOFT.map((skill, i) => (
-                        <SoftCard key={skill.name} {...skill} index={i} />
-                    ))}
+                {/* Colonne gauche : Technologies */}
+                <div className="competences__left">
+                    <h3 className="competences__group-title mono">Technologies</h3>
+                    <div className="tech-categories">
+                        {CATEGORIES.map((cat) => {
+                            const catSkills = SKILLS_TECH.filter((s) => s.category === cat);
+                            const start = skillIndex;
+                            skillIndex += catSkills.length;
+                            return (
+                                <TechCategory
+                                    key={cat}
+                                    category={cat}
+                                    skills={catSkills}
+                                    startIndex={start}
+                                />
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
 
-            {/* Langues */}
-            <div className="competences__block">
-                <h3 className="competences__group-title mono">Langues</h3>
-                <div className="lang-grid">
-                    {SKILLS_LANGUAGES.map((lang, i) => (
-                        <LangCard key={lang.name} {...lang} index={i} />
-                    ))}
+                {/* Colonne droite : Soft skills + Langues */}
+                <div className="competences__right">
+                    <div>
+                        <h3 className="competences__group-title mono">Soft skills</h3>
+                        <div className="soft-grid">
+                            {SKILLS_SOFT.map((skill, i) => (
+                                <SoftCard key={skill.name} {...skill} index={i} />
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="competences__group-title mono">Langues</h3>
+                        <div className="lang-list">
+                            {SKILLS_LANGUAGES.map((lang, i) => (
+                                <AnimatedCard className="lang-row" key={lang.name} delay={i * 60}>
+                                    <span className="lang-row__flag">{lang.flag}</span>
+                                    <span className="lang-row__name">{lang.name}</span>
+                                    <span className="lang-row__level mono">{lang.level}</span>
+                                </AnimatedCard>
+                            ))}
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
     );
