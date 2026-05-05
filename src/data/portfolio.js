@@ -9,7 +9,7 @@ export const IDENTITY = {
     initials: "CHG",
     role: "",
     subtitle: "BTS SIO · Option SLAM",
-    bio: "Passionné par le développement logiciel, je suis actuellement en BTS SIO option SLAM. J'aime concevoir des applications propres, efficaces et bien documentées. Ce portfolio regroupe mes projets, compétences et documents réalisés au cours de ma formation.",
+    bio: "Actuellement en BTS SIO option SLAM, je m’intéresse particulièrement au développement full stack et à la création d’applications web complètes. J’aime travailler aussi bien sur la partie front‑end que sur la partie back‑end. Ce portfolio rassemble mes projets, mes compétences et les travaux réalisés durant ma formation.",
     email: "cristianogaspar601@gmail.com",
     github: "https://github.com/chenriqu7",
     linkedin: "https://www.linkedin.com/in/cristiano-henrique-gaspar-a11366301/",
@@ -100,9 +100,38 @@ export const EDUCATION = [
 export const PROJECTS = [
     {
         title: "Portail Serveur",
-        desc: "Tableau de bord sécurisé permettant de centraliser la gestion des accès aux serveurs et de suivre les connexions à distance en temps réel.",
-        descLong: "Développé lors de mon stage de 6 semaines chez Pictav Informatique, ce portail permet aux administrateurs de gérer les accès aux serveurs de l'entreprise. L'application propose une interface de gestion des utilisateurs, un suivi des connexions en temps réel et un système d'authentification sécurisé.",
-        tags: ["PHP", "HTML/CSS", "JavaScript", "MySQL"],
+        desc: "Interface web interne de gestion des accès serveurs : verrouillage, historique et suivi des connexions. Projet de stage chez Pictav Informatique.",
+        descLong: `Interface web centralisée pour la **gestion des accès aux serveurs** de l'entreprise Pictav Informatique, développée sur 6 semaines de stage.
+
+Contexte :
+L'entreprise déployait des logiciels en SaaS sur plusieurs serveurs accessibles via bureau à distance. Une seule connexion étant possible par utilisateur, les connexions simultanées entraînaient des déconnexions involontaires. La coordination se faisait via Teams, avec des risques d'oubli ou de mauvaise communication.
+
+Objectif :
+Remplacer la conversation Teams par une interface dédiée permettant de vérifier la disponibilité des serveurs, de les verrouiller pendant une intervention et de consulter l'historique des accès.
+
+Fonctionnalités principales :
+- **Authentification** sécurisée par login et mot de passe.
+- Affichage du **statut en temps réel** de chaque serveur (libre / verrouillé, par qui, depuis quand).
+- **Verrouillage / déverrouillage** d'un serveur : seul l'utilisateur ayant verrouillé peut libérer le serveur.
+- **Historique complet** des interventions : utilisateur, heure de début, heure de fin, raison.
+- Gestion du **paramétrage serveur** : ajout et modification de serveurs.
+- Gestion du **profil utilisateur** : modification du mail et du mot de passe.
+- **Notification** en cas d'intervention trop longue (mail ou pop-up).
+- Précision de la **machine impactée** (serveur hôte, VM1, VM2…).
+- Affichage fluide de **10 serveurs** sans scroll ni pagination.
+
+Technologies utilisées :
+- **PHP** — backend et logique serveur
+- **MySQL** — base de données
+- **HTML / CSS / JavaScript** — interface utilisateur
+
+Ce que ça m'a apporté :
+- Première expérience complète de développement en **contexte professionnel**.
+- Conception d'une application web de A à Z, de l'analyse au déploiement.
+- Compréhension des enjeux d'une interface **interne en entreprise** (ergonomie, fiabilité, sécurité).
+- Gestion autonome du projet avec des **points quotidiens** avec le superviseur.
+- Renforcement de mes compétences en **PHP** et en gestion de **bases de données relationnelles**.`,
+        tags: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
         github: "https://github.com/chenriqu7/PortailServeur",
         demo: "",
         year: "2026",
@@ -110,10 +139,36 @@ export const PROJECTS = [
     },
     {
         title: "BeReady",
-        desc: "Application fullstack composée d'une API REST .NET et d'un frontend Angular/Ionic permettant une utilisation mobile et web.",
-        descLong: "BeReady est une application fullstack développée avec une API REST en .NET FastEndpoints et un frontend Angular avec Ionic et Capacitor pour un rendu mobile natif. Le backend expose des endpoints RESTful consommés par le frontend cross-platform.",
-        tags: [".NET", "FastEndpoints", "API RESTful", "Angular", "Ionic", "Capacitor", "HTML/CSS"],
-        github: "https://github.com/chenriqu7/BeReady-Backend",
+        desc: "Application mobile de défis quotidiens avec réseau social intégré : publications, likes, classement et messagerie de groupe. Projet d'AP de 2e année BTS.",
+        descLong: `Application mobile **sociale et gamifiée** développée en équipe de quatre dans le cadre d'un projet d'AP de 2e année BTS, autour d'un système de défis quotidiens.
+
+Contexte :
+Le projet simule une commande client pour l'entreprise fictive MESC : une application destinée à un **public jeune**, où chaque utilisateur relève un défi proposé chaque jour et publie une photo comme preuve de réalisation. L'objectif est de combiner l'engagement des défis avec les mécaniques d'un réseau social.
+
+Fonctionnalités principales :
+- **Défi quotidien** identique pour tous les utilisateurs, avec publication de photo comme preuve.
+- **Fil de publications** visible par tous jusqu'au défi suivant, avec filtre amis / global.
+- Système d'**amis** : ajout, consultation des profils et des publications.
+- Système de **likes** contribuant à un classement global des utilisateurs.
+- **Profil utilisateur** complet : défis réalisés, plus longue série, likes reçus, succès débloqués, titres actifs.
+- **Messagerie de groupe** privée : création, gestion des membres (ajout, suppression, promotion) par l'administrateur du groupe.
+- Système de **succès et titres** pour valoriser les utilisateurs les plus actifs.
+
+Technologies utilisées :
+- **Angular + Ionic** — application mobile cross-platform
+- **Tailwind CSS** — design et ergonomie
+- **C# / .NET** — logique métier et API REST
+- **Gitea** — versioning
+
+Ce que ça m'a apporté :
+- Expérience du développement d'une **application mobile** avec Angular et Ionic.
+- Travail en équipe de quatre avec une vraie organisation projet.
+- Conception d'une **API REST en C#** couvrant des fonctionnalités sociales complexes.
+- Gestion de l'**upload et du stockage d'images** côté backend.
+- Renforcement de mes compétences en **sécurité** : authentification, gestion des accès et protection des données.
+- Pratique du travail en **télétravail** avec coordination via Discord et Teams.`,
+        tags: ["Angular", "Ionic", "Tailwind", "C#/.NET", "API RESTful", "Docker"],
+        github: "",
         demo: "",
         year: "2026",
         screenshots: [],
@@ -155,9 +210,10 @@ Ce que ça m'a apporté :
         github: "https://github.com/chenriqu7/Pyrofetes-Frontend",
         demo: "",
         year: "2025",
-        screenshots: Array.from({ length: 10 }, (_, i) =>
+        screenshots: Array.from({length: 10}, (_, i) =>
             `/screenshots/pyrofetes/pyrofetes${i + 1}.jpg`
-        ),    },
+        ),
+    },
 ]
 
 // ── CATÉGORIES DE DOCUMENTS ───────────────────────────────────────────────────
@@ -222,26 +278,26 @@ export const VEILLE_ITEMS = [
         title: 'Évolution des API pour le Full Stack',
         tags: ['REST', 'GraphQL', 'tRPC', 'WebSockets', 'OpenAPI'],
         description:
-            "Je suis l'évolution des architectures API à travers des newsletters techniques, la documentation officielle des frameworks et des projets personnels qui me permettent de tester concrètement les nouveaux standards (tRPC, GraphQL subscriptions, Server-Sent Events).",
+            "Je suis l'évolution des architectures API et des bonnes pratiques de développement backend pour mieux concevoir des applications web modernes dans mes projets de BTS SIO SLAM.",
         methode: [
-            "Lecture hebdomadaire de newsletters : Bytes.dev, JavaScript Weekly et ThisWeek in React",
-            "Suivi de la roadmap et des changelogs de frameworks clés : Next.js, Hono, Fastify, Apollo",
-            "Veille GitHub sur les dépôts à forte croissance liés aux API (étoiles, issues, discussions)",
-            "Test en projet sandbox des nouveaux paradigmes : tRPC dans un monorepo, GraphQL avec Pothos",
-            "Consultation de la documentation MDN et des RFC OpenAPI pour les standards émergents",
+            "Abonnement à des newsletters gratuites comme JavaScript Weekly et Bytes.dev pour suivre les nouveautés du développement web.",
+            "Configuration d'alertes Google sur des mots-clés ciblés comme 'API REST', 'GraphQL', 'tRPC' et 'OpenAPI' afin de recevoir les principales actualités par e-mail.",
+            "Suivi des dépôts GitHub des frameworks et outils que j’utilise pour repérer les nouvelles versions, corrections et évolutions importantes.",
+            "Consultation régulière de la documentation officielle de MDN, OpenAPI et des frameworks étudiés pour comprendre les changements techniques.",
+            "Tri et synthèse des informations utiles dans mes notes ou dans mon portfolio pour les réutiliser dans mes projets de développement.",
         ],
         apports: [
-            "Maîtrise des différences entre REST, GraphQL et tRPC pour choisir la bonne architecture selon le projet",
-            "Capacité à concevoir une API typesafe de bout en bout (Zod + tRPC + TypeScript)",
-            "Compréhension des enjeux de performance : pagination, caching, batching de requêtes",
-            "Vision des patterns modernes : BFF (Backend For Frontend), API Gateway, versioning",
+            "Mieux comprendre les différences entre REST, GraphQL et autres pour choisir l’approche la plus adaptée à un projet.",
+            "Être capable de concevoir des API plus propres, plus sécurisées et plus faciles à maintenir.",
+            "Améliorer la structure de mes applications en intégrant des bonnes pratiques comme la pagination, le versioning ou le caching.",
+            "Développer une veille utile pour anticiper les évolutions des outils que j’utilise en développement web.",
         ],
         sources: [
-            {label: 'Bytes.dev', url: 'https://bytes.dev'},
-            {label: 'JavaScript Weekly', url: 'https://javascriptweekly.com'},
-            {label: 'tRPC Docs', url: 'https://trpc.io/docs'},
-            {label: 'OpenAPI Spec', url: 'https://spec.openapis.org/oas/latest.html'},
-            {label: 'ThisWeek in React', url: 'https://thisweekinreact.com'},
+            { label: 'JavaScript Weekly', url: 'https://javascriptweekly.com' },
+            { label: 'Bytes.dev', url: 'https://bytes.dev' },
+            { label: 'GitHub Trending', url: 'https://github.com/trending/typescript' },
+            { label: 'Alertes Google', url: 'https://www.google.fr/alerts' },
+            { label: 'MDN Web Docs', url: 'https://developer.mozilla.org' },
         ],
     },
     {
@@ -250,26 +306,26 @@ export const VEILLE_ITEMS = [
         title: 'Développement durable dans les infrastructures IT',
         tags: ['Green Cloud', 'Sobriété numérique', 'GreenOps', 'Data centers', 'Écoconception'],
         description:
-            "Je suis les enjeux environnementaux du numérique à travers des rapports institutionnels (ADEME, Green Software Foundation), des blogs spécialisés et des outils de mesure de l'empreinte carbone des applications web et cloud.",
+            "Je m'intéresse aux impacts environnementaux du numérique et aux solutions pour concevoir des applications plus sobres et plus respectueuses de l’environnement.",
         methode: [
-            "Lecture des rapports annuels de l'ADEME et de la Green Software Foundation sur l'impact du numérique",
-            "Suivi du blog et des publications de l'INR (Institut du Numérique Responsable)",
-            "Utilisation d'outils de mesure : Website Carbon Calculator, Ecograder, Cloud Carbon Footprint",
-            "Veille sur les pratiques GreenOps : rightsizing cloud, serverless frugal, optimisation des images et assets",
-            "Suivi des annonces des grands providers (AWS, GCP, Azure) sur leurs objectifs carbone et outils d'estimation",
+            "Mise en place d'alertes Google sur des termes comme 'Green IT', 'écoconception web', 'numérique responsable' et 'sobriété numérique'.",
+            "Lecture de newsletters gratuites et d'articles spécialisés sur le numérique responsable pour suivre les bonnes pratiques actuelles.",
+            "Utilisation d’outils gratuits comme Website Carbon Calculator pour analyser l’impact de certains de mes projets web.",
+            "Consultation des ressources de l’ADEME, de l’INR et du référentiel RGESN pour m’appuyer sur des sources fiables.",
+            "Observation des choix techniques liés à l’hébergement, à l’optimisation des pages et à la réduction des ressources inutiles dans mes projets.",
         ],
         apports: [
-            "Intégration de réflexes d'écoconception dès la phase de développement (lazy loading, compression, requêtes optimisées)",
-            "Capacité à estimer et réduire l'empreinte carbone d'une application ou d'une infrastructure cloud",
-            "Connaissance des référentiels : RGESN (Référentiel Général d'Écoconception de Services Numériques)",
-            "Sensibilité aux choix d'hébergement : régions cloud, énergie renouvelable, PUE des data centers",
+            "Développer le réflexe d’écoconception dès la création d’une application web.",
+            "Comprendre comment réduire le poids des pages, limiter les requêtes et améliorer les performances.",
+            "Prendre en compte l’impact environnemental dans mes choix techniques et d’hébergement.",
+            "Montrer dans mon portfolio que je peux associer développement web et démarche responsable.",
         ],
         sources: [
-            {label: 'ADEME Numérique', url: 'https://www.ademe.fr/domaines-dintervention/numerique/'},
-            {label: 'Green Software Foundation', url: 'https://greensoftware.foundation'},
-            {label: 'Institut du Numérique Responsable', url: 'https://institutnr.org'},
-            {label: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com'},
-            {label: 'Cloud Carbon Footprint', url: 'https://www.cloudcarbonfootprint.org'},
+            { label: 'Alertes Google', url: 'https://www.google.fr/alerts' },
+            { label: 'Green Software Foundation', url: 'https://greensoftware.foundation' },
+            { label: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com' },
+            { label: 'ADEME Numérique', url: 'https://www.ademe.fr/domaines-dintervention/numerique/' },
+            { label: 'RGESN', url: 'https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/' },
         ],
     },
 ];
