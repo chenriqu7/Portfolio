@@ -43,7 +43,7 @@ export default function Navbar({ active }) {
                 </li>
             ))}
             <li>
-              <a href="/cv.pdf" download className="navbar__cv-btn mono">
+              <a href="../../../public/CV-Alternance-HENRIQUE_GASPAR-Cristiano.pdf" download className="navbar__cv-btn mono">
                 CV ↓
               </a>
             </li>
@@ -71,7 +71,7 @@ export default function Navbar({ active }) {
                     {item.label}
                   </button>
               ))}
-              <a href="/cv.pdf" download className="navbar__cv-btn mono">
+              <a href="../../../public/CV-Alternance-HENRIQUE_GASPAR-Cristiano.pdf" download className="navbar__cv-btn mono">
                 CV ↓
               </a>
             </div>
