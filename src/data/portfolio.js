@@ -17,38 +17,37 @@ export const IDENTITY = {
 
 // ── COMPÉTENCES TECHNIQUES ───────────────────────────────────────────────────
 export const SKILLS_TECH = [
-    { name: "HTML",       icon: "html",       category: "Frontend" },
-    { name: "CSS",        icon: "css",        category: "Frontend" },
-    { name: "JavaScript", icon: "javascript", category: "Frontend" },
-    { name: "React",      icon: "react",      category: "Frontend" },
-    { name: "Angular",    icon: "angular",    category: "Frontend" },
-    { name: "PHP",        icon: "php",        category: "Backend"  },
-    { name: "Symfony",    icon: "symfony",    category: "Backend"  },
-    { name: "C#/.NET",    icon: "dotnet",     category: "Backend"  },
-    { name: "C++",        icon: "cpp",        category: "Backend"  },
-    { name: "Python",     icon: "python",     category: "Backend"  },
-    { name: "MySQL",      icon: "mysql",      category: "Data"     },
-    { name: "PostgreSQL", icon: "postgresql", category: "Data"     },
-    { name: "Git",        icon: "git",        category: "Outils"   },
-    { name: "Docker",     icon: "docker",     category: "Outils"   },
+    {name: "HTML", icon: "html", category: "Frontend"},
+    {name: "CSS", icon: "css", category: "Frontend"},
+    {name: "JavaScript", icon: "javascript", category: "Frontend"},
+    {name: "React", icon: "react", category: "Frontend"},
+    {name: "Angular", icon: "angular", category: "Frontend"},
+    {name: "PHP", icon: "php", category: "Backend"},
+    {name: "Symfony", icon: "symfony", category: "Backend"},
+    {name: "C#/.NET", icon: "dotnet", category: "Backend"},
+    {name: "C++", icon: "cpp", category: "Backend"},
+    {name: "Python", icon: "python", category: "Backend"},
+    {name: "MySQL", icon: "mysql", category: "Data"},
+    {name: "PostgreSQL", icon: "postgresql", category: "Data"},
+    {name: "Git", icon: "git", category: "Outils"},
+    {name: "Docker", icon: "docker", category: "Outils"},
 ];
 
 export const SKILLS_SOFT = [
-    { name: "Autonomie",         icon: "🎯" },
-    { name: "Travail en équipe", icon: "🤝" },
-    { name: "Communication",     icon: "💬" },
-    { name: "Polyvalent",        icon: "🔄" },
-    { name: "Gestion de projet", icon: "📋" },
-    { name: "Méthode Agile",     icon: "⚡" },
+    {name: "Autonomie", icon: "🎯"},
+    {name: "Travail en équipe", icon: "🤝"},
+    {name: "Communication", icon: "💬"},
+    {name: "Polyvalent", icon: "🔄"},
+    {name: "Gestion de projet", icon: "📋"},
+    {name: "Méthode Agile", icon: "⚡"},
 ];
 
 export const SKILLS_LANGUAGES = [
-    { name: "Français",  level: "Natif", flag: "🇫🇷" },
-    { name: "Portugais", level: "Natif", flag: "🇵🇹" },
-    { name: "Espagnol",  level: "Courant",    flag: "🇪🇸" },
-    { name: "Anglais",   level: "B2",    flag: "🇬🇧" },
+    {name: "Français", level: "Natif", flag: "🇫🇷"},
+    {name: "Portugais", level: "Natif", flag: "🇵🇹"},
+    {name: "Espagnol", level: "Courant", flag: "🇪🇸"},
+    {name: "Anglais", level: "B2", flag: "🇬🇧"},
 ];
-
 
 
 // ── EXPÉRIENCES PROFESSIONNELLES ─────────────────────────────────────────────
@@ -269,6 +268,34 @@ export const DOCUMENTS = [
         date: "Mars 2026",
         file: "/documents/ReferencementWeb.pdf",
     },
+    {
+        category: "stages",
+        title: "Mise en production Portail Serveur",
+        desc: "Documentation",
+        date: "Mars 2026",
+        file: "/documents/PortailServeur-MiseEnProd_v1.pdf",
+    },
+    {
+        category: "stages",
+        title: "Carnet de bord Portail Serveur",
+        desc: "Carnet de bord",
+        date: "Mars 2026",
+        file: "/documents/CarnetDeBord-Stage-Cristiano.pdf",
+    },
+    {
+        category: "stages",
+        title: "Documentation Portail Serveur",
+        desc: "Documentation",
+        date: "Février 2026",
+        file: "/documents/PortailServeur-DocGenerale-Cristiano.pdf",
+    },
+    {
+        category: "stages",
+        title: "Utilisation de Power Automate",
+        desc: "Fiche de procédure",
+        date: "Février 2026",
+        file: "/documents/PortailServeur-UtilisationPowerAutomate.pdf",
+    },
 ];
 
 export const VEILLE_ITEMS = [
@@ -293,11 +320,11 @@ export const VEILLE_ITEMS = [
             "Développer une veille utile pour anticiper les évolutions des outils que j’utilise en développement web.",
         ],
         sources: [
-            { label: 'JavaScript Weekly', url: 'https://javascriptweekly.com' },
-            { label: 'Bytes.dev', url: 'https://bytes.dev' },
-            { label: 'GitHub Trending', url: 'https://github.com/trending/typescript' },
-            { label: 'Alertes Google', url: 'https://www.google.fr/alerts' },
-            { label: 'MDN Web Docs', url: 'https://developer.mozilla.org' },
+            {label: 'JavaScript Weekly', url: 'https://javascriptweekly.com'},
+            {label: 'Bytes.dev', url: 'https://bytes.dev'},
+            {label: 'GitHub Trending', url: 'https://github.com/trending/typescript'},
+            {label: 'Alertes Google', url: 'https://www.google.fr/alerts'},
+            {label: 'MDN Web Docs', url: 'https://developer.mozilla.org'},
         ],
     },
     {
@@ -321,11 +348,14 @@ export const VEILLE_ITEMS = [
             "Montrer dans mon portfolio que je peux associer développement web et démarche responsable.",
         ],
         sources: [
-            { label: 'Alertes Google', url: 'https://www.google.fr/alerts' },
-            { label: 'Green Software Foundation', url: 'https://greensoftware.foundation' },
-            { label: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com' },
-            { label: 'ADEME Numérique', url: 'https://www.ademe.fr/domaines-dintervention/numerique/' },
-            { label: 'RGESN', url: 'https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/' },
+            {label: 'Alertes Google', url: 'https://www.google.fr/alerts'},
+            {label: 'Green Software Foundation', url: 'https://greensoftware.foundation'},
+            {label: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com'},
+            {label: 'ADEME Numérique', url: 'https://www.ademe.fr/domaines-dintervention/numerique/'},
+            {
+                label: 'RGESN',
+                url: 'https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/'
+            },
         ],
     },
 ];
