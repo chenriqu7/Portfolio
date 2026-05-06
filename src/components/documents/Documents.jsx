@@ -13,7 +13,6 @@ function PdfModal({ doc, onClose }) {
                         <span className="pdf-modal__icon">📄</span>
                         <div>
                             <h3 className="pdf-modal__title">{doc.title}</h3>
-                            {doc.date && <span className="pdf-modal__date mono">{doc.date}</span>}
                         </div>
                     </div>
                     <div className="pdf-modal__actions">
@@ -44,7 +43,6 @@ function DocCard({ doc, index, onOpen }) {
             <div className="doc-card__body">
                 <h4 className="doc-card__title">{doc.title}</h4>
                 <p className="doc-card__desc">{doc.desc}</p>
-                {doc.date && <span className="doc-card__date mono">{doc.date}</span>}
             </div>
             {doc.file && (
                 <button className="doc-card__link" onClick={() => onOpen(doc)}>

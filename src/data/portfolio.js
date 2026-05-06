@@ -134,7 +134,9 @@ Ce que ça m'a apporté :
         github: "https://github.com/chenriqu7/PortailServeur",
         demo: "",
         year: "2026",
-        screenshots: [],
+        screenshots: Array.from({length: 4}, (_, i) =>
+            `/screenshots/portailserveur/portailserveur${i + 1}.png`
+        ),
     },
     {
         title: "BeReady",
@@ -295,6 +297,13 @@ export const DOCUMENTS = [
         desc: "Fiche de procédure",
         date: "Février 2026",
         file: "/documents/PortailServeur-UtilisationPowerAutomate.pdf",
+    },
+    {
+        category: "autre",
+        title: "Le Cloud",
+        desc: "Documentation",
+        date: "Février 2026",
+        file: "/documents/Cloud-Cristiano.pdf",
     },
 ];
 
