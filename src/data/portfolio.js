@@ -326,6 +326,13 @@ export const DOCUMENTS = [
         date: "Février 2026",
         file: "/documents/Cahier des charges PyroFetes.pdf",
     },
+    {
+        category: "autre",
+        title: "Configuration d'un VPS",
+        desc: "Fiche de procédure",
+        date: "Février 2026",
+        file: "/documents/ConfigVPS.pdf",
+    },
 ];
 
 export const VEILLE_ITEMS = [
