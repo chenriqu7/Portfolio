@@ -305,6 +305,27 @@ export const DOCUMENTS = [
         date: "Février 2026",
         file: "/documents/Cloud-Cristiano.pdf",
     },
+    {
+        category: "autre",
+        title: "Tableau de Compétence BTS",
+        desc: "Documentation",
+        date: "Février 2026",
+        file: "/documents/E5_Tableau_Synthèse_2026.pdf",
+    },
+    {
+        category: "projets",
+        title: "Cahier des charges BeReady",
+        desc: "Cahier des charges",
+        date: "Février 2026",
+        file: "/documents/Cahier des charges BeReady.pdf",
+    },
+    {
+        category: "projets",
+        title: "Cahier des charges Pyrofetes",
+        desc: "Cahier des charges",
+        date: "Février 2026",
+        file: "/documents/Cahier des charges PyroFetes.pdf",
+    },
 ];
 
 export const VEILLE_ITEMS = [
