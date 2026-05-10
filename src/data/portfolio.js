@@ -345,9 +345,9 @@ export const VEILLE_ITEMS = [
             "Je suis l'évolution des architectures API et des bonnes pratiques de développement backend pour mieux concevoir des applications web modernes dans mes projets de BTS SIO SLAM.",
         methode: [
             "Abonnement à des newsletters gratuites comme JavaScript Weekly et Bytes.dev pour suivre les nouveautés du développement web.",
-            "Configuration d'alertes Google sur des mots-clés ciblés comme 'API REST', 'GraphQL', 'tRPC' et 'OpenAPI' afin de recevoir les principales actualités par e-mail.",
+            "Configuration d'alertes Google sur des mots-clés ciblés comme 'API REST', 'GraphQL' et 'OpenAPI' afin de recevoir les principales actualités par e-mail.",
             "Suivi des dépôts GitHub des frameworks et outils que j’utilise pour repérer les nouvelles versions, corrections et évolutions importantes.",
-            "Consultation régulière de la documentation officielle de MDN, OpenAPI et des frameworks étudiés pour comprendre les changements techniques.",
+            "Consultation régulière de la documentation officielle de OpenAPI et des frameworks étudiés pour comprendre les changements techniques.",
             "Tri et synthèse des informations utiles dans mes notes ou dans mon portfolio pour les réutiliser dans mes projets de développement.",
         ],
         apports: [
@@ -382,7 +382,6 @@ export const VEILLE_ITEMS = [
             "Développer le réflexe d’écoconception dès la création d’une application web.",
             "Comprendre comment réduire le poids des pages, limiter les requêtes et améliorer les performances.",
             "Prendre en compte l’impact environnemental dans mes choix techniques et d’hébergement.",
-            "Montrer dans mon portfolio que je peux associer développement web et démarche responsable.",
         ],
         sources: [
             {label: 'Alertes Google', url: 'https://www.google.fr/alerts'},
